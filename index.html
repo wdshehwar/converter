@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 18 in javascript</title>
+</head>
+<body>
+    <h1><center>Conversion Of Kilogram into meter , cm , milimeter, miligram ,grams</center></h1>
+    <hr><hr>
+     <center>
+     <table style="background-color: cadetblue;">
+        <tr>
+            <td>KILOGRAM</td>
+            <td>GRAM</td>
+            <td>MILLIGRAM</td>
+           
+        </tr>
+        <tr>
+            <td><input type="number" id= "kil"></td>
+           <td><input type="number" id= "gr"></td>
+           <td><input type="number" id= "milgr"></td>
+  </tr>
+    </table >
+</center>
+            
+    <center>
+        <table style="background-color: cadetblue;">
+            <tr>
+                <td>CENTIMETER</td>
+                <td>METER</td>
+                <td>MILIMETER</td>
+            </tr>
+            <tr>
+                <td><input type="number" id= "cent"></td>
+                <td><input type="number" id= "metr"></td>
+                <td><input type="number" id= "milmetr"></td>
+            </tr>
+        </table>
+    </center>
+    <center>
+        <table style="background-color: cadetblue;">
+            <tr>
+                <td >YEARS </td>
+                <td>MONTHS</td>
+                <td >DAYS</td> 
+            </tr>
+            <tr>
+                <td><input type="number" id="year"></td>
+                <td><input type="number" id="month"></td>
+                <td><input type="number" id="day"></td>
+            </tr>
+            <tr>
+                <td>HOURS</td>
+                <td>MINUTES</td>
+                <td>SECONDS</td>
+            </tr>
+            <tr>
+                <td><input type="number" id="hour"></td>
+                <td><input type="number" id="min"></td>
+                <td><input type="number" id="second"></td>
+            </tr>
+        </table>
+    </center>
+
+   
+
+    <script>
+let k = document.getElementById("kil");
+let g = document.getElementById("gr");
+let mig = document.getElementById("milgr");
+let c = document.getElementById("cent");
+let me = document.getElementById("metr");
+let mim = document.getElementById("milmetr");
+let y = document.getElementById("year");
+let m = document.getElementById("month");
+let d = document.getElementById("day");
+let hor = document.getElementById("hour");
+let mi = document.getElementById("min");
+let s = document.getElementById("second");
+
+k.addEventListener('input',function(){
+    graam = ( k.value)*1000 ;
+    g.value = graam ;
+    miligram = (k.value)*1000*1000            
+    mig.value = miligram ; 
+});
+
+g.addEventListener('input',function(){
+    kilog = (g.value)/1000;
+    k.value = kilog;
+    milligram = (g.value)*1000;
+    mig.value = milligram;
+    centimeter = 
+    c.value = centimeter;
+    meter = 
+    me.value = meter;
+    millimeter = 
+    mim.value = millimeter;
+});
+mig.addEventListener('input',function(){
+kiilo = (mig.value)*1000000;
+k.value = kiilo;
+grm = (mig.value)/1000
+g.value = grm ;
+}); 
+c.addEventListener('input',function(){
+metre = c.value/100;
+me.value = metre;
+millimetre = (c.value)*10;
+mim.value = millimetre;
+});
+me.addEventListener('input',function(){
+centimetre = 100*(me.value);
+me.value = centimetre;
+millime = (me.value)*1000;
+me.value = millime;
+});
+mim.addEventListener('input',function(){
+cnm = mim.value/10;
+c.value = cnm;
+mwtr = mim.value/1000;
+me.value = mwtr;
+});   
+y.addEventListener('input', function(){
+    mon = (y.value)*12;
+    da = mon * 30;
+    hr =  da * 24;
+    minu = da * 60;
+    sc = da * 86400;
+    
+    m.value = mon;
+    d.value = da;
+    s.value = sc;
+    hor.value = hr;
+    mi.value = minu;
+ });   
+ m.addEventListener('input', function (){
+      yeaar = m.value/12;
+      y.value = yeaar;
+      daay = (m.value)*30;
+      d.value = daay;  
+      houuur =  (m.value)*730;
+      hor.value = houuur;
+      minuttte = (m.value)*43800;
+      mi.value = minuttte;
+      seccond = (m.value *2.628+6) ;
+      s.value = seccond;
+});
+d.addEventListener('input' ,function(){
+    yaar = (d.value)/365;
+    y.value = yaar ;
+    mounth = d.value/30;
+    m.value = yaar ;
+    huuur = d.value*24;
+    hor.value= huuur;
+    miiin = d.value*1440;
+    mi.value = miiin;
+    secccond = d.value *86400;
+    s.value = secccond; 
+});
+
+   </script>
+</body>
+</html>
